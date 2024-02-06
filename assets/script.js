@@ -82,10 +82,8 @@ const localStorageKey = 'shortenedUrls';
 
       let expirationTime = parseInt(selectedExpiration, 10);
 
-      // Save to local storage and current session array
-      addShortenedUrl(originalUrl, shortenedUrl,expirationTime);
+      addShortenedUrl(originalUrl, shortenedUrl, expirationTime);
 
-      // Display the updated list from current session array
       displayShortenedUrls();
 
       // Clear the input when the URL is shortened and displayed
@@ -93,6 +91,4 @@ const localStorageKey = 'shortenedUrls';
 
       expirationDropdown.value = expirationDropdown.options[0].value;
     }
-
-    // Display the initial list of shortened URLs on page load
     displayShortenedUrls();
